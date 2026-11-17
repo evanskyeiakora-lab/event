@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#006b73">
+  <meta name="description" content="The Best Couple EFFECT'26 — Dominic Bekoe and Helena Esi Tawiah Hasford. Wedding celebration at Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa.">
+  <title>The Best Couple | EFFECT'26 — Dominic Bekoe & Helena Esi Tawiah Hasford</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --teal: #006b73;
+      --teal-deep: #004b53;
+      --teal-bright: #13a9b3;
+      --gold: #bd914b;
+      --gold-light: #e5c987;
+      --gold-pale: #f3e6c8;
+      --ivory: #fffaf0;
+      --paper: #fffdf8;
+      --sage: #eaf1e8;
+      --ink: #173b40;
+      --muted: #657477;
+      --line: rgba(189,145,75,.36);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--ivory);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.12rem;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+    .sans { font-family: "DM Sans", sans-serif; }
+    .script { font-family: "Great Vibes", cursive; font-weight: 400; }
+    .topbar {
+      background: var(--teal-deep);
+      color: var(--gold-pale);
+      text-align: center;
+      padding: 9px 15px;
+      font-family: "DM Sans", sans-serif;
+      font-size: .7rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .navbar {
+      background: rgba(255,250,240,.97);
+      border-bottom: 1px solid var(--line);
+    }
+    .navbar-brand {
+      color: var(--teal-deep);
+      font-family: "Great Vibes", cursive;
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .nav-link {
+      color: var(--teal-deep);
+      font-family: "DM Sans", sans-serif;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .nav-link:hover { color: var(--gold); }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--teal);
+      padding: 68px 18px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(229,201,135,.75);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .hero::after {
+      content: "✿  ❧  ✿";
+      position: absolute;
+      left: -22px;
+      bottom: 20px;
+      writing-mode: vertical-rl;
+      color: rgba(229,201,135,.45);
+      font-size: 2.5rem;
+      letter-spacing: .5rem;
+      z-index: -1;
+    }
+    .hero-panel {
+      max-width: 970px;
+      margin: auto;
+      padding: clamp(38px, 7vw, 82px) 20px;
+      text-align: center;
+      color: var(--ivory);
+      border: 1px solid rgba(229,201,135,.38);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,.09), transparent 45%),
+        linear-gradient(145deg, rgba(0,75,83,.18), rgba(0,40,46,.24));
+    }
+    .hero-kicker {
+      color: var(--gold-pale);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(.95rem, 2vw, 1.2rem);
+      letter-spacing: .14em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      color: #fffaf0;
+      font-size: clamp(4.1rem, 11vw, 8.5rem);
+      line-height: .95;
+      font-weight: 400;
+      margin: 25px 0 4px;
+      text-shadow: 0 3px 18px rgba(0,0,0,.14);
+    }
+    .hero-amp {
+      display: block;
+      color: var(--gold-light);
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(3.2rem, 7vw, 5rem);
+      line-height: .9;
+    }
+    .hero-subtitle {
+      color: var(--gold-pale);
+      font-size: clamp(1.25rem, 3vw, 1.8rem);
+      letter-spacing: .08em;
+      margin-top: 14px;
+    }
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      color: var(--gold-light);
+      margin: 25px auto;
+      max-width: 360px;
+    }
+    .gold-divider::before, .gold-divider::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light));
+      flex: 1;
+    }
+    .gold-divider::after { transform: scaleX(-1); }
+    .hero-meta {
+      color: #fff8e9;
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+    .btn-teal, .btn-gold-outline {
+      display: inline-block;
+      border-radius: 50px;
+      padding: 12px 23px;
+      font-family: "DM Sans", sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      transition: .2s ease;
+    }
+    .btn-teal {
+      background: var(--gold-light);
+      color: var(--teal-deep);
+      border: 1px solid var(--gold-light);
+    }
+    .btn-teal:hover { background: #f1dfb5; color: var(--teal-deep); transform: translateY(-2px); }
+    .btn-gold-outline {
+      color: var(--ivory);
+      border: 1px solid var(--gold-light);
+    }
+    .btn-gold-outline:hover { background: var(--gold-light); color: var(--teal-deep); }
+    .section { padding: 82px 0; }
+    .section-kicker {
+      color: var(--gold);
+      font-family: "DM Sans", sans-serif;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .section-title {
+      color: var(--teal-deep);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.5rem, 5vw, 4.1rem);
+      line-height: 1;
+      font-weight: 600;
+      margin: 12px 0 18px;
+    }
+    .script-heading {
+      color: var(--teal);
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 1;
+    }
+    .invitation-card {
+      position: relative;
+      max-width: 940px;
+      margin: auto;
+      padding: clamp(30px, 6vw, 65px);
+      text-align: center;
+      background: var(--paper);
+      border: 5px double var(--gold);
+      box-shadow: 0 18px 55px rgba(36,51,48,.08);
+    }
+    .invitation-card::before, .invitation-card::after {
+      content: "❧";
+      position: absolute;
+      color: var(--gold);
+      font-size: 2rem;
+    }
+    .invitation-card::before { top: 7px; left: 15px; }
+    .invitation-card::after { bottom: 7px; right: 15px; transform: rotate(180deg); }
+    .intro-copy { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: 1.25rem; }
+    .programme-section { background: linear-gradient(120deg, #f7f6ec 0%, var(--sage) 100%); }
+    .programme-note { color: var(--muted); max-width: 650px; margin: 0 auto; font-size: 1.2rem; }
+    .programme-list {
+      max-width: 850px;
+      margin: 42px auto 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: item;
+      border: 1px solid var(--line);
+      background: rgba(255,253,248,.84);
+    }
+    .programme-list li {
+      counter-increment: item;
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 22px;
+      border-bottom: 1px solid rgba(189,145,75,.2);
+    }
+    .programme-list li:last-child { border-bottom: 0; }
+    .programme-list li::before {
+      content: counter(item, decimal-leading-zero);
+      color: var(--gold);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+    }
+    .programme-item-title { color: var(--teal-deep); font-weight: 700; font-size: 1.2rem; }
+    .programme-detail { color: var(--muted); font-size: 1rem; }
+    .credit { margin-top: 28px; color: var(--teal); font-size: 1.15rem; font-style: italic; }
+    .venue-section { background: var(--teal-deep); color: var(--ivory); }
+    .venue-section .section-title { color: var(--ivory); }
+    .venue-section .section-kicker { color: var(--gold-light); }
+    .venue-copy { color: #e3e9e5; font-size: 1.15rem; }
+    .venue-detail {
+      border-top: 1px solid rgba(229,201,135,.4);
+      border-bottom: 1px solid rgba(229,201,135,.4);
+      padding: 19px 0;
+      margin: 25px 0;
+    }
+    .venue-detail i { color: var(--gold-light); font-size: 1.25rem; }
+    .map-frame { width: 100%; height: 390px; border: 0; background: #ddd; }
+    .map-wrap { padding: 6px; border: 1px solid var(--gold-light); background: rgba(255,255,255,.06); }
+    .map-caption { color: #d8e2de; font-family: "DM Sans", sans-serif; font-size: .75rem; margin-top: 12px; }
+    .qr-card {
+      max-width: 590px;
+      margin: auto;
+      padding: 35px;
+      text-align: center;
+      background: var(--paper);
+      border: 5px double var(--gold);
+      box-shadow: 0 15px 45px rgba(36,51,48,.07);
+    }
+    #qrcode {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 190px;
+      min-height: 190px;
+      padding: 10px;
+      margin: 16px 0;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    #qrcode img, #qrcode canvas { max-width: 100%; height: auto; }
+    .qr-status { color: var(--muted); font-family: "DM Sans", sans-serif; font-size: .8rem; }
+    .footer {
+      padding: 35px 0;
+      background: #003e45;
+      color: #e7e9df;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .footer .script { color: var(--gold-light); font-size: 3rem; }
+    .footer small { font-family: "DM Sans", sans-serif; color: #d0ded9; letter-spacing: .08em; }
+    @media (max-width: 767px) {
+      .hero { padding: 25px 12px; }
+      .hero::before { inset: 8px; }
+      .hero-panel { padding: 55px 12px; }
+      .section { padding: 62px 0; }
+      .programme-list li { grid-template-columns: 42px 1fr; gap: 10px; padding: 13px 12px; }
+      .map-frame { height: 310px; }
+      .qr-card { padding: 25px 16px; }
+    }
+    @media print {
+      .topbar, nav, .hero, .venue-section, .qr-section, .footer, .no-print { display: none !important; }
+      body, .programme-section { background: white !important; }
+      .section { padding: 12px 0; }
+      .programme-list { margin-top: 15px; }
+      .programme-list li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">The Best Couple · EFFECT'26 · A Celebration of Love</div>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Dominic <span style="color:var(--gold)">&</span> Helena</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#celebration">Celebration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
+          <li class="nav-item"><a class="nav-link" href="#venue">Venue</a></li>
+          <li class="nav-item"><a class="nav-link" href="#qr">Event QR</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-panel">
+      <div class="hero-kicker">With joy and gratitude<br>we invite you to celebrate</div>
+      <h1 class="script">Dominic Bekoe</h1>
+      <span class="hero-amp">&</span>
+      <h1 class="script" style="margin-top:0">Helena Esi Tawiah Hasford</h1>
+      <div class="gold-divider"><i class="bi bi-heart-fill"></i></div>
+      <div class="hero-subtitle">THE BEST COUPLE · EFFECT'26</div>
+      <p class="hero-meta mt-4 mb-2"><i class="bi bi-calendar-event me-2"></i>Saturday, 28 November 2026</p>
+      <p class="hero-meta mb-2"><i class="bi bi-clock me-2"></i>9:30 AM</p>
+      <p class="hero-meta mb-4"><i class="bi bi-geo-alt me-2"></i>Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn-teal" href="#programme">View Reception Programme</a>
+        <a class="btn-gold-outline" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer">View Venue on Google Maps</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="celebration">
+      <div class="container">
+        <div class="invitation-card">
+          <div class="section-kicker">A special day · A beautiful beginning</div>
+          <div class="script-heading mt-3">The Best Couple</div>
+          <div class="gold-divider"><i class="bi bi-flower1"></i></div>
+          <p class="intro-copy">
+            With warm hearts, we gather to celebrate Dominic Bekoe and Helena Esi Tawiah Hasford.
+            Your presence, goodwill and kind wishes will make this occasion
+            even more meaningful. Thank you for sharing in their joy.
+          </p>
+          <p class="script-heading mt-4 mb-0" style="font-size:3rem">EFFECT'26</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programme-section" id="programme">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-kicker">Order of celebration</div>
+          <h2 class="section-title">Reception Programme</h2>
+          <p class="programme-note">Standard outline for the reception. The programme is presented in the order supplied by the organisers.</p>
+          <div class="gold-divider"><i class="bi bi-flower1"></i></div>
+        </div>
+        <ol class="programme-list">
+          <li><div><div class="programme-item-title">Arrival of Guests</div></div></li>
+          <li><div><div class="programme-item-title">Couple Trail</div><div class="programme-detail">Arrival of the couple</div></div></li>
+          <li><div><div class="programme-item-title">Opening Prayer</div><div class="programme-detail">To be announced</div></div></li>
+          <li><div><div class="programme-item-title">Special Announcement & Purpose of Gathering</div><div class="programme-detail">Master of Ceremonies (MC)</div></div></li>
+          <li><div><div class="programme-item-title">Introduction of Some Dignitaries</div><div class="programme-detail">List to be provided</div></div></li>
+          <li><div><div class="programme-item-title">First Dance</div><div class="programme-detail">The couple</div></div></li>
+          <li><div><div class="programme-item-title">Cutting of Cake</div><div class="programme-detail">To be announced</div></div></li>
+          <li><div><div class="programme-item-title">Bridesmaids Meet Groomsmen</div><div class="programme-detail">Competition</div></div></li>
+          <li><div><div class="programme-item-title">Refreshment</div><div class="programme-detail">Food Bazaar</div></div></li>
+          <li><div><div class="programme-item-title">Champagne Celebration</div></div></li>
+          <li><div><div class="programme-item-title">Presentations / Gifts</div></div></li>
+          <li><div><div class="programme-item-title">Announcements</div></div></li>
+          <li><div><div class="programme-item-title">Closing Prayer</div><div class="programme-detail">To be announced</div></div></li>
+        </ol>
+        <div class="text-center">
+          <div class="credit">Programme prepared by MCEEPAKK ✍🏾</div>
+          <button class="btn-teal mt-3 no-print" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print Programme</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section venue-section" id="venue">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="section-kicker">We look forward to welcoming you</div>
+            <h2 class="section-title">Find the Venue</h2>
+            <p class="venue-copy">Please use the event organiser's shared Google Maps pin for the destination. You can open the pin or request directions directly from your phone.</p>
+            <div class="venue-detail">
+              <div class="d-flex gap-3 mb-3">
+                <i class="bi bi-geo-alt-fill"></i>
+                <div><strong>Reception Location</strong><br><span class="venue-copy">Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana</span></div>
+              </div>
+              <div class="d-flex gap-3">
+                <i class="bi bi-calendar-event"></i>
+                <div><strong>Reception Date</strong><br><span class="venue-copy">Saturday, 28 November 2026</span></div>
+              </div>
+              <div class="d-flex gap-3 mt-3">
+                <i class="bi bi-clock"></i>
+                <div><strong>Time</strong><br><span class="venue-copy">9:30 AM</span></div>
+              </div>
+            </div>
+            <a class="btn-teal me-2 mb-2" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer"><i class="bi bi-map me-2"></i>Open Exact Venue Pin</a>
+            <a class="btn-gold-outline mb-2" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer"><i class="bi bi-sign-turn-right me-2"></i>Get Directions</a>
+            <p class="map-caption">The exact destination is provided through the Google Maps link shared by the organiser.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="map-wrap">
+              <iframe class="map-frame" title="Map preview of Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana"
+                src="https://www.google.com/maps?q=Rev.%20Gaddiel%20Acquaah%20Methodist%20Church%2C%20Nzema%20Line%2C%20Tarkwa%2C%20Ghana&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <p class="map-caption">Area preview of Nzema Line, Tarkwa. For the precise event destination, use the “Open Exact Venue Pin” button.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section qr-section" id="qr">
+      <div class="container">
+        <div class="qr-card">
+          <div class="section-kicker">Keep the event details close</div>
+          <h2 class="section-title">Scan to Visit</h2>
+          <p class="text-secondary">After the website is published online, this QR code will open the full event page, reception programme and venue information.</p>
+          <div id="qrcode" aria-label="Event website QR code"><span class="qr-status">Preparing QR code…</span></div>
+          <p class="qr-status" id="qrStatus">The QR code will use this website's published address.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+            <button class="btn-teal" id="downloadQr" type="button" disabled><i class="bi bi-download me-2"></i>Download QR Code</button>
+            <button class="btn btn-outline-secondary rounded-pill sans" id="shareEvent" type="button"><i class="bi bi-whatsapp me-2"></i>Share Event</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="script">Dominic Bekoe & Helena Esi Tawiah Hasford</div>
+      <small>THE BEST COUPLE · EFFECT'26</small>
+      <div class="mt-2">28 November 2026 · Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana</div>
+      <div class="mt-2">With love and appreciation to all our guests.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    const qrContainer = document.getElementById("qrcode");
+    const qrStatus = document.getElementById("qrStatus");
+    const downloadButton = document.getElementById("downloadQr");
+    const shareButton = document.getElementById("shareEvent");
+
+    function renderEventQr() {
+      const pageUrl = window.location.href;
+      const isLocal = window.location.protocol === "file:" ||
+        ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        qrContainer.innerHTML = '<div class="qr-status px-3">Publish this page online first.<br>The QR code will appear here automatically.</div>';
+        qrStatus.textContent = "A public website address is needed so guests can scan the QR code from anywhere.";
+        downloadButton.disabled = true;
+        return;
+      }
+      if (typeof QRCode === "undefined") {
+        qrContainer.innerHTML = '<div class="qr-status px-3">QR library unavailable. Check your internet connection and refresh.</div>';
+        qrStatus.textContent = "QR code generator could not load.";
+        return;
+      }
+      qrContainer.innerHTML = "";
+      new QRCode(qrContainer, {
+        text: pageUrl, width: 190, height: 190,
+        colorDark: "#004b53", colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+      qrStatus.textContent = "This QR code opens the complete EFFECT'26 event website.";
+      downloadButton.disabled = false;
+    }
+
+    downloadButton.addEventListener("click", () => {
+      const image = qrContainer.querySelector("canvas") || qrContainer.querySelector("img");
+      if (!image) return;
+      const dataUrl = image.tagName.toLowerCase() === "canvas" ? image.toDataURL("image/png") : image.src;
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = "The-Best-Couple-EFFECT26-QR.png";
+      document.body.appendChild(link); link.click(); link.remove();
+    });
+
+    shareButton.addEventListener("click", async () => {
+      const shareText = "The Best Couple – EFFECT'26\nDominic Bekoe & Helena Esi Tawiah Hasford\n28 November 2026\nRev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana\nReception programme and venue: " + window.location.href;
+      if (navigator.share) {
+        try { await navigator.share({ title: "The Best Couple – EFFECT'26", text: shareText, url: window.location.href }); }
+        catch (error) { /* Sharing cancelled by visitor. */ }
+      } else {
+        window.open("https://wa.me/?text=" + encodeURIComponent(shareText), "_blank", "noopener");
+      }
+    });
+    renderEventQr();
+  </script>
+</body>
+</html>
