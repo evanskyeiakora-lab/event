@@ -312,6 +312,24 @@
       .programme-list { margin-top: 15px; }
       .programme-list li { break-inside: avoid; }
     }
+
+    /* Live event countdown */
+    .countdown-section {
+      background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+      color: var(--ivory);
+      padding: 58px 18px;
+      text-align: center;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+    .countdown-section .section-kicker { color: var(--gold-light); }
+    .countdown-section h2 { color: var(--ivory); }
+    .countdown-grid { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin: 28px auto 18px; }
+    .countdown-unit { min-width: 100px; padding: 18px 14px; border: 1px solid rgba(229,201,135,.6); border-radius: 14px; background: rgba(255,250,240,.08); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+    .countdown-number { display: block; color: var(--gold-light); font-family: "DM Sans", sans-serif; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.05; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .countdown-label { display: block; margin-top: 8px; color: var(--gold-pale); font-family: "DM Sans", sans-serif; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
+    #countdownMessage { color: var(--gold-pale); font-size: 1.15rem; margin: 18px 0 0; }
+    @media (max-width: 480px) { .countdown-unit { min-width: 70px; padding: 14px 8px; } .countdown-label { font-size: .62rem; letter-spacing: .07em; } }
   </style>
 </head>
 <body>
@@ -348,12 +366,27 @@
       <p class="hero-meta mb-4"><i class="bi bi-geo-alt me-2"></i>Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana</p>
       <div class="d-flex flex-wrap justify-content-center gap-3">
         <a class="btn-teal" href="#programme">View Reception Programme</a>
-        <a class="btn-gold-outline" href="https://www.google.com/maps/search/?api=1&query=5.3025775%2C-1.9897991" target="_blank" rel="noopener noreferrer">View Venue on Google Maps</a>
+        <a class="btn-gold-outline" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer">View Venue on Google Maps</a>
       </div>
     </div>
   </header>
 
   <main>
+
+    <section class="countdown-section" id="countdown-section" aria-labelledby="countdownHeading">
+      <div class="container">
+        <div class="section-kicker">The celebration is getting closer</div>
+        <h2 class="section-title" id="countdownHeading" style="color:var(--ivory)">The Big Day Is Coming!</h2>
+        <p class="mb-2">Counting down to Dominic & Helena's special day</p>
+        <div class="countdown-grid" aria-label="Countdown to the wedding">
+          <div class="countdown-unit"><span class="countdown-number" id="countdownDays">00</span><span class="countdown-label">Days</span></div>
+          <div class="countdown-unit"><span class="countdown-number" id="countdownHours">00</span><span class="countdown-label">Hours</span></div>
+          <div class="countdown-unit"><span class="countdown-number" id="countdownMinutes">00</span><span class="countdown-label">Minutes</span></div>
+          <div class="countdown-unit"><span class="countdown-number" id="countdownSeconds">00</span><span class="countdown-label">Seconds</span></div>
+        </div>
+        <p id="countdownMessage" aria-live="polite">We can't wait to celebrate with you!</p>
+      </div>
+    </section>
     <section class="section" id="celebration">
       <div class="container">
         <div class="invitation-card">
@@ -394,7 +427,7 @@
           <li><div><div class="programme-item-title">Closing Prayer</div><div class="programme-detail">To be announced</div></div></li>
         </ol>
         <div class="text-center">
-          <div class="credit"># MCEEPAKK ✍🏾</div>
+          <div class="credit">Programme prepared by MCEEPAKK ✍🏾</div>
           <button class="btn-teal mt-3 no-print" onclick="window.print()"><i class="bi bi-printer me-2"></i>Print Programme</button>
         </div>
       </div>
@@ -418,17 +451,17 @@
               </div>
               <div class="d-flex gap-3 mt-3">
                 <i class="bi bi-clock"></i>
-                <div><strong>Time</strong><br><span class="venue-copy">1:30 PM</span></div>
+                <div><strong>Time</strong><br><span class="venue-copy">9:30 AM</span></div>
               </div>
             </div>
-            <a class="btn-teal me-2 mb-2" href="https://www.google.com/maps/search/?api=1&query=5.3025775%2C-1.9897991" target="_blank" rel="noopener noreferrer"><i class="bi bi-map me-2"></i>Open Exact Venue Pin</a>
-            <a class="btn-gold-outline mb-2" href="https://www.google.com/maps/search/?api=1&query=5.3025775%2C-1.9897991" target="_blank" rel="noopener noreferrer"><i class="bi bi-sign-turn-right me-2"></i>Get Directions</a>
+            <a class="btn-teal me-2 mb-2" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer"><i class="bi bi-map me-2"></i>Open Exact Venue Pin</a>
+            <a class="btn-gold-outline mb-2" href="https://maps.app.goo.gl/uresixcmdJKssSaK9?g_st=iw" target="_blank" rel="noopener noreferrer"><i class="bi bi-sign-turn-right me-2"></i>Get Directions</a>
             <p class="map-caption">The exact destination is provided through the Google Maps link shared by the organiser.</p>
           </div>
           <div class="col-lg-7">
             <div class="map-wrap">
               <iframe class="map-frame" title="Map preview of Rev. Gaddiel Acquaah Methodist Church, Nzema Line, Tarkwa, Ghana"
-                src="https://www.google.com/maps/search/?api=1&query=5.3025775%2C-1.9897991"
+                src="https://www.google.com/maps?q=Rev.%20Gaddiel%20Acquaah%20Methodist%20Church%2C%20Nzema%20Line%2C%20Tarkwa%2C%20Ghana&output=embed"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
             <p class="map-caption">Area preview of Nzema Line, Tarkwa. For the precise event destination, use the “Open Exact Venue Pin” button.</p>
@@ -441,7 +474,7 @@
       <div class="container">
         <div class="qr-card">
           <div class="section-kicker">Keep the event details close</div>
-          <h2 class="section-title">Please scan the QR code below to access the program outline and view the schedule of events</h2>
+          <h2 class="section-title">Scan to Visit</h2>
           <p class="text-secondary">After the website is published online, this QR code will open the full event page, reception programme and venue information.</p>
           <div id="qrcode" aria-label="Event website QR code"><span class="qr-status">Preparing QR code…</span></div>
           <p class="qr-status" id="qrStatus">The QR code will use this website's published address.</p>
@@ -517,6 +550,31 @@
         window.open("https://wa.me/?text=" + encodeURIComponent(shareText), "_blank", "noopener");
       }
     });
+
+    // Live countdown: 28 November 2026 at 9:30 AM Ghana time (UTC).
+    const weddingDate = new Date("2026-11-28T09:30:00+00:00").getTime();
+    const countdownMessage = document.getElementById("countdownMessage");
+    function updateWeddingCountdown() {
+      const distance = weddingDate - Date.now();
+      if (distance <= 0) {
+        ["countdownDays", "countdownHours", "countdownMinutes", "countdownSeconds"].forEach(id => {
+          document.getElementById(id).textContent = "00";
+        });
+        countdownMessage.textContent = distance > -86400000 ? "🎉 Today is the day! The celebration has begun!" : "Thank you for celebrating this beautiful moment with us!";
+        return;
+      }
+      const days = Math.floor(distance / 86400000);
+      const hours = Math.floor((distance % 86400000) / 3600000);
+      const minutes = Math.floor((distance % 3600000) / 60000);
+      const seconds = Math.floor((distance % 60000) / 1000);
+      document.getElementById("countdownDays").textContent = String(days).padStart(2, "0");
+      document.getElementById("countdownHours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("countdownMinutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("countdownSeconds").textContent = String(seconds).padStart(2, "0");
+      countdownMessage.textContent = "We can't wait to celebrate with you!";
+    }
+    updateWeddingCountdown();
+    const countdownInterval = setInterval(updateWeddingCountdown, 1000);
     renderEventQr();
   </script>
 </body>
